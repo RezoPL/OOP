@@ -37,16 +37,15 @@ $(function() {
 
 			return $column;
     	}
-
-    	Column.prototype = {
-    		addCard: function(card) {
-      		this.$element.children('ul').append(card.$element);
-    		},
-    		removeColumn: function() {
-      		this.$element.remove();
-    		}
-		};
   	}
+  	Column.prototype = {
+    	addCard: function(card) {
+      	this.$element.children('ul').append(card.$element);
+    	},
+    	removeColumn: function() {
+      	this.$element.remove();
+    	}
+	};
 
   	function Card(description) {
 		var self = this;
@@ -68,13 +67,13 @@ $(function() {
 				.append($cardDescription);
 			return $card;
     	}
-
-    	Card.prototype = {
-			removeCard: function() {
-				this.$element.remove();
-			}
+	}
+	Card.prototype = {
+		removeCard: function() {
+			this.$element.remove();
 		}
 	}
+
 	var board = {
     	name: 'Kanban Board',
     	addColumn: function(column) {
